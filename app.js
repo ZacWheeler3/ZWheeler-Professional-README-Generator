@@ -1,20 +1,19 @@
-const questions = require("./questions");
+const {questions} = require("./questions");
 const inquirer = require("inquirer");
 const fs = require("fs");
-console.log(questions);
+const {generateMarkdown} = require("./generateMarkdown");
 
 function askQuestions() {
-  inquirer.prompt(questions).then(({projectName:project}) => {
-    console.log(project);
-    fs.appendFile("test.md",JSON.stringify(project), "utf-8", function(err) {
-        console.error(err);
+  inquirer.prompt(questions).then((answers) => {
+    const template = generateMarkdown(answers);
+    fs.writeFile("test.md",template, "utf-8", function(err) {
+        if (err) console.error(err);
     });
   });
 }
 
 function main() {
-  console.log(questions);
-  askQuestions();
+    askQuestions();
 }
 
 main();

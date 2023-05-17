@@ -9,7 +9,7 @@ const questions = [
   {
     type: "input",
     message: "What are your thoughts on the README file?",
-    name: "Description",
+    name: "description",
   },
 
   {
@@ -40,5 +40,5 @@ const questions = [
 ];
 
 module.exports = {
-  questions,
+  questions
 };

@@ -123,7 +123,7 @@ const licenses = [
   {
     name: "Pearl",
     value:
-      "![License Artistic-2.0](https://img.shields.io/badge/License-Artistic--2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)",
+      "[![License Artistic-2.0](https://img.shields.io/badge/License-Artistic--2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)",
   },
   {
     name: "The Artistic License 2.0",
